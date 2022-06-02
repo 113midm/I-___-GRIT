@@ -110,7 +110,7 @@ body {
 
 .main-page {
   height: 100vh;
-  background-image: url(../image/unsplash_main-bg.png);
+  background-image: url(../image/home/home_bg.png);
 }
 
 /* inner > header */
@@ -195,7 +195,7 @@ body {
 }
 
 .main-page>.section>.side>.side-bar>button {
-  background-image: url(../image/main_menubar.svg);
+  background-image: url(../image/home/home_sideMenuBar-gray.svg);
   background-repeat: no-repeat;
   display: block;
   width: 40px;
@@ -205,7 +205,7 @@ body {
 }
 
 .main-page>.section>.side>.side-bar>button.active {
-  background-image: url(../image/main_menubar_black.svg);
+  background-image: url(../image/home/home_sideMenuBar-black.svg);
 }
 
 .main-page>.section>.side>.side-bar>.side-menu {
@@ -310,7 +310,7 @@ body {
   line-height: 24px;
   text-align: left;
   color: var(--main-color-gray);
-  background-image: url(../image/arrow-next.svg);
+  background-image: url(../image/home/home_arrow-next.svg);
   background-repeat: no-repeat;
   background-position: right;
   position: relative;
@@ -321,7 +321,7 @@ body {
 .am-page #fullpage > .section-5 > .arrow-box > button:hover {
   animation-play-state: paused;
   color: var(--main-color-yellow);
-  background-image: url(../image/arrow-next_yellow.svg);
+  background-image: url(../image/home/home_arrow-next_yellow.svg);
 }
 
 @keyframes infinitemoveLeft {
@@ -599,7 +599,7 @@ body {
 }
 
 .am-page #fullpage>.section-2 .contents-box>.character>.text-box {
-  background-image: url(../image/character-inside.svg);
+  background-image: url(../image/am/am_sec2-inside.svg);
   background-repeat: no-repeat;
   width: 288px;
   height: 178px;
@@ -607,17 +607,17 @@ body {
 }
 
 .am-page #fullpage>.section-2 .contents-box>.outside>.text-box {
-  background-image: url(../image/character-outside.svg);
+  background-image: url(../image/am/am_sec2-outside.svg);
 }
 
 .am-page #fullpage>.section-2 .contents-box>.skills>.text-box {
-  background-image: url(../image/character-skills.svg);
+  background-image: url(../image/am/am_sec2-skills.svg);
   width: 468px;
   height: 300px;
 }
 
 .am-page #fullpage>.section-2 .contents-box>.exper>.text-box {
-  background-image: url(../image/character-exper.svg);
+  background-image: url(../image/am/am_sec2_experience.svg);
   width: 452px;
   height: 225px;
 }
@@ -815,7 +815,7 @@ body {
 /* am page > section-4 */
 .am-page #fullpage>.section-4,
 .am-page #fullpage>.section-5 {
-  background-image: url(../image/am_turtle_bg.svg);
+  background-image: url(../image/am/am_sec4_5-bg.svg);
 }
 
 .am-page #fullpage>.section-4>div>.grit-sub {
@@ -908,14 +908,14 @@ body {
 }
 
 .am-page #fullpage > .section-5 > .arrow-box > .prev {
-  background-image: url(../image/arrow-prev.svg);
+  background-image: url(../image/am/am_arrow-prev.svg);
   background-position: left;
   padding-left: 72px;
   width: 140px;
 }
 
 .am-page #fullpage > .section-5 > .arrow-box > .prev:hover {
-  background-image: url(../image/arrow-prev_yellow.svg);
+  background-image: url(../image/am/am_arrow-prev_yellow.svg);
 }
 
 .am-page #fullpage > .section-5 > .arrow-box > .next {
