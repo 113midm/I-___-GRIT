@@ -98,6 +98,22 @@ input:focus {
   --text-color: #1B1C25;
 }
 
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--main-color-gray);
+}
+::-webkit-scrollbar-thumb {
+  height: 8px;
+  border-radius: 0;
+  background-color: var(--text-color);
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: var(--main-color-gray);
+}
+
 /* custom */
 body {
   overflow-x: hidden;
@@ -301,7 +317,8 @@ body {
 }
 
 .main-page>.section>.side>.arrow-box>button,
-.am-page #fullpage > .section-5 > .arrow-box > button {
+.am-page #fullpage > .section-5 > .arrow-box > button,
+.do-page > .section > .arrow-box > button {
   display: block;
   width: 100%;
   height: 50px;
@@ -318,7 +335,8 @@ body {
 }
 
 .main-page>.section>.side>.arrow-box>button:hover,
-.am-page #fullpage > .section-5 > .arrow-box > button:hover {
+.am-page #fullpage > .section-5 > .arrow-box > button:hover,
+.do-page > .section > .arrow-box > button:hover {
   animation-play-state: paused;
   color: var(--main-color-yellow);
   background-image: url(../image/home/home_arrow-next_yellow.svg);
@@ -514,7 +532,8 @@ body {
 
 /* wave animation */
 
-.am-page #fullpage .section-1_inner .wave-box .waves {
+.am-page #fullpage .section-1_inner .wave-box .waves,
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .wave-box .waves {
   position: relative;
   width: 100%;
   height: 15vh;
@@ -533,12 +552,14 @@ body {
 
 /* Animation */
 
-.am-page #fullpage .section-1_inner .wave-box .parallax>use {
+.am-page #fullpage .section-1_inner .wave-box .parallax>use,
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .wave-box .parallax>use {
   /* animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite; */
   animation: move-forever 10s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-.am-page #fullpage .section-1_inner .wave-box .parallax>use:nth-child(1) {
+.am-page #fullpage .section-1_inner .wave-box .parallax>use:nth-child(1),
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .wave-box .parallax>use {
   animation-delay: -2s;
   animation-duration: 7s;
 }
@@ -896,7 +917,8 @@ body {
   background-position: 0% 80%;
 }
 
-.am-page #fullpage > .section-5 > .arrow-box {
+.am-page #fullpage > .section-5 > .arrow-box,
+.do-page > .section > .arrow-box {
   width: 100%;
   padding: 13px;
   position: absolute;
@@ -907,18 +929,21 @@ body {
   justify-content: space-between;
 }
 
-.am-page #fullpage > .section-5 > .arrow-box > .prev {
+.am-page #fullpage > .section-5 > .arrow-box > .prev,
+.do-page > .section > .arrow-box > .prev {
   background-image: url(../image/am/am_arrow-prev.svg);
   background-position: left;
   padding-left: 72px;
   width: 140px;
 }
 
-.am-page #fullpage > .section-5 > .arrow-box > .prev:hover {
+.am-page #fullpage > .section-5 > .arrow-box > .prev:hover,
+.do-page > .section > .arrow-box > .prev:hover {
   background-image: url(../image/am/am_arrow-prev_yellow.svg);
 }
 
-.am-page #fullpage > .section-5 > .arrow-box > .next {
+.am-page #fullpage > .section-5 > .arrow-box > .next,
+.do-page > .section > .arrow-box > .next {
   width: 180px;
   padding-right: 72px;
 }
@@ -980,4 +1005,140 @@ body {
 
 .am-page #fullpage > .section-5 > div > .to-top:hover > a {
   animation-play-state: paused;
+}
+
+
+
+
+/* do page > section */
+.do-page > .header {
+  position: fixed !important;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.do-page > .section {
+  border: 3px solid var(--text-color);
+  height: calc(100% - 100px);
+  background-image: url(../image/do/do_sec-bg.svg);
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+.do-page > .section > .arrow-box {
+  position: fixed;
+}
+.do-page > .section > .arrow-box > .prev {
+  width: 180px;
+}
+.do-page > .section > .arrow-box > .next {
+  padding-right: 50px;
+  color: var(--text-color);
+  background-image: url(../image/do/do_arrow-next-black.svg);
+}
+
+.do-page > .section > .do-logo {
+  position: fixed;
+  right: 280px;
+  bottom: 0;
+}
+
+.do-page > .section > .container {
+  display: flex;
+  justify-content: space-between;
+}
+.do-page > .section > .container > .menu-box {
+  width: 205px;
+  background-color: #1B1C25;
+}
+.do-page > .section > .container > .menu-box > .inner {
+  position: fixed;
+  top: 165px;
+  left: 360px;
+}
+.do-page > .section > .container > .contents-box {
+  width: calc(100% - 208px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.do-page > .section > .container > .menu-box > .inner > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.do-page > .section > .container > .menu-box > .inner > ul > .line {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.do-page > .section > .container > .menu-box > .inner > ul > .line > span {
+  display: inline-block;
+  width: 35px;
+  height: 3px;
+  background-color: var(--main-color-gray);
+}
+.do-page > .section > .container > .menu-box > .inner > ul > li > a {
+  display: block;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: right;
+  color: var(--main-color-gray);
+}
+.do-page > .section > .container > .menu-box > .inner > ul li.active > a {
+  color: var(--main-color-yellow);
+}
+.do-page > .section > .container > .menu-box > .inner > ul ul li > a {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 131.5%;
+  text-align: right;
+  color: var(--main-color-gray);
+  margin-top: 10px;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro {
+  position: relative;
+  z-index: 100;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .project-inform {
+  position: absolute;
+  top: 500px;
+  left: 100px;
+  z-index: 100;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .wave-box > .yellow-box {
+  height: 600px;
+  background-color: var(--main-color-yellow);
+  position: relative;
+  background-image: url(../image/brandLogo.svg);
+  background-repeat: no-repeat;
+  background-size: 430px;
+  background-position: center;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .intro > .wave-box > svg {
+  transform: rotate(180deg);
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .overview {
+  background-image: url(../image/do/personal/do_personal-overview-title.svg);
+  background-repeat: no-repeat;
+  background-position: 130px 0px;
+  height: 280px;
+  position: relative;
+  top: -88px;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .overview > .overview-text {
+  width: 513px;
+  height: 100%;
+  margin-left: 290px;
+  padding-top: 200px;
+}
+.do-page > .section > .container > .contents-box > .personal > .inner > .goal {
+  height: 105px;
+  background-image: url(../image/do/personal/do_personal-goal-text.svg);
+  background-repeat: no-repeat;
+  background-position: 431px 100%;
+  margin-bottom: 500px;
 }
