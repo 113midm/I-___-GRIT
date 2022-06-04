@@ -1008,20 +1008,20 @@ body {
 }
 
 .am-page #fullpage>.section-5>div>.to-top>a,
-.do-page>.section>.container>.contents-box>.personal>.inner>.to-top-btn a {
+.do-page>.section>.container>.contents-box>div>.inner>.to-top-btn a {
   position: relative;
   animation: infinitemoveTop .5s linear infinite alternate;
 }
 
 .am-page #fullpage>.section-5>div>.to-top:hover>a,
-.do-page>.section>.container>.contents-box>.personal>.inner>.to-top-btn>.to-top:hover a {
+.do-page>.section>.container>.contents-box>div>.inner>.to-top-btn>.to-top:hover a {
   animation-play-state: paused;
 }
 
 
 
 
-/* do page > section */
+/* do page > header */
 .do-page#inner>.header {
   position: fixed;
   top: 0%;
@@ -1032,6 +1032,8 @@ body {
   width: 100%;
   border-bottom: 3px solid var(--text-color);
 }
+
+/* do page > section */
 
 .do-page>.section {
   background-image: url(../image/do/do_sec-bg.svg);
@@ -1063,6 +1065,7 @@ body {
   justify-content: space-between;
 }
 
+/* do page > section > menu-box */
 .do-page>.section>.container>.menu-box {
   width: 209px;
   background-color: #1B1C25;
@@ -1123,6 +1126,16 @@ body {
   margin-top: 10px;
 }
 
+/* do page > section > contents-box */
+.do-page>.section>.container>.contents-box>div {
+  display: none;
+}
+
+.do-page>.section>.container>.contents-box>div.active {
+  display: block;
+}
+
+/* do page > section > contents-box > personal */
 .do-page>.section>.container>.contents-box>.personal>.inner>.intro {
   position: relative;
   z-index: 100;
@@ -1235,15 +1248,16 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.typography>p:not(.inter) {
   top: 32px;
-  /* right: 112px; */
   left: 548px;
   color: var(--main-color-gray);
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.typography>.inter {
   bottom: 144px;
   left: 147px;
@@ -1251,56 +1265,68 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.typography>p:not(.inter).active {
   width: 28ch;
   animation: typinganimation 1.5s steps(40);
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.typography>.inter.active {
   width: 29ch;
   animation: typinganimation 1.5s steps(29);
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-title {
   height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-title>p{
+
+.do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-title>p {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   transform: rotate(-90deg);
   display: inline-block;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail img {
   display: block;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-home>img:first-child,
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-am>img:first-child {
   padding-left: 93px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-home>img:last-child {
   padding-top: 30px;
   padding-left: 147px;
   margin-bottom: 150px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-am>img:last-child {
   padding-top: 30px;
   padding-left: 179px;
   margin-bottom: 167px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-do>img {
   padding-left: 112px;
   padding-bottom: 175px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-will>img {
   padding-left: 87px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.design-detail>.design-detail-will>img:last-child {
   padding-top: 30px;
   margin-bottom: 205px;
 }
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue{
+
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue {
   height: 275px;
   background-image: url(../image/do/personal/do_personal-epilogue-text.svg);
   background-repeat: no-repeat;
@@ -1311,6 +1337,7 @@ body {
 .do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.epilogue-title {
   margin-left: 60px;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio {
   width: 180px;
   height: 40px;
@@ -1325,6 +1352,7 @@ body {
   left: 0px;
   transition: left 0.5s ease;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>img {
   left: 10px;
 }
@@ -1338,30 +1366,285 @@ body {
   top: -15px;
   z-index: 1;
 }
+
 .do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>span {
   animation: portfolioEf 0.5s ease forwards;
 }
+
 @keyframes portfolioEf {
   from {
     height: 3px;
     left: 0px;
-    
+
   }
+
   to {
     height: 40px;
     left: 60px;
     top: -38px;
   }
 }
-.do-page>.section>.container>.contents-box>.personal>.inner>.to-top-btn {
+
+.do-page>.section>.container>.contents-box>div>.inner>.to-top-btn {
   position: relative;
   height: 100px;
   margin-bottom: 50px;
 }
-.do-page>.section>.container>.contents-box>.personal>.inner>.to-top-btn>.to-top {
+
+.do-page>.section>.container>.contents-box>div>.inner>.to-top-btn>.to-top {
   cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* do page > section > contents-box > app */
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro {
+  height: 640px;
+  background-image: url(../image/do/app-renewal/do_app-intro-bg.svg);
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title {
+  display: flex;
+  position: absolute;
+  top: 206px;
+  left: 74px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>.on {
+  width: 72.28px;
+  height: 35px;
+  background-color: #1A3C40;
+  border-radius: 37px;
+  margin-right: 6.56px;
+  position: relative;
+  transition: all linear;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>.on>span {
+  display: inline-block;
+  width: 25.65px;
+  height: 25.65px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 4.6px;
+  transform: translateY(-50%);
+  transition: all ease-in-out;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>div:last-child {
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>div:last-child>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>div:last-child>img:last-child {
+  opacity: 0;
+  transition: all linear;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.goal {
+  height: 470px;
+  margin-top: 100px;
+  margin-bottom: 220px;
+  background-image: url(../image/do/app-renewal/do_app-goal-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.goal>.goal-title {
+  position: absolute;
+  top: 355px;
+  left: 124px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.schedule {
+  height: 660px;
+  background-image: url(../image/do/app-renewal/do_app-schedule-graph.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.schedule>.schedule-title {
+  text-align: center;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.concept {
+  height: 660px;
+  background-image: url(../image/do/app-renewal/do_app-concept-text.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.concept>.concept-bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.concept>.concept-bg-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.grid-system {
+  height: 455px;
+  margin-top: 140px;
+  margin-bottom: 245px;
+  background-image: url(../image/do/app-renewal/do_app-grid-text.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.grid-system>.grid-system-title {
+  position: absolute;
+  top: 64px;
+  left: 600px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system {
+  height: 390px;
+  margin-bottom: 265px;
+  background-image: url(../image/do/app-renewal/do_app-logo-text.svg);
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system>img {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system>.logo-system-bg {
+  position: relative;
+  height: 221px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system>.logo-system-bg>img {
+  height: 0px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system>.logo-system-bg>img.active {
+  animation: logoBg 0.5s forwards;
+}
+
+@keyframes logoBg {
+  to {
+    height: 221px;
+  }
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.color-system {
+  height: 235px;
+  margin-bottom: 215px;
+  background-image: url(../image/do/app-renewal/do_app-color-text.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.color-system>.color-system-title {
+  padding-left: 152px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.color-system>.color-system-title>svg {
+  display: flex;
+  overflow: visible;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.color-system>.color-system-title>svg>path {
+  display: block;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography {
+  height: 391px;
+  margin-bottom: 215px;
+  background-image: url(../image/do/app-renewal/do_app-typo-text.svg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography>.typography-title {
+  position: absolute;
+  top: 67px;
+  left: 220px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography>.typography-title>p {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 135%;
+  letter-spacing: 0;
+  color: rgba(237, 230, 219, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography>.typography-title.active>p {
+  width: 12ch;
+  animation: typinganimation 1.5s steps(12);
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.flow-chart {
+  height: 1460px;
+  margin-bottom: 145px;
+  background-image: url(../image/do/app-renewal/do_app-flow-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.flow-chart>.flow-chart-title {
+  width: 88px;
+  margin-left: auto;
+  margin-right: 106px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.design-detail {
+  height: 6250px;
+  margin-bottom: 155px;
+  background-image: url(../image/do/app-renewal/do_app-detail-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: left bottom;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.design-detail>.design-detail-title {
+  width: 376px;
+  margin-left: auto;
+  margin-right: 114px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.epilogue {
+  height: 705px;
+  background-image: url(../image/do/app-renewal/do_app-epilogue-text.svg);
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.epilogue>.epilogue-title {
+  width: 246px;
+  margin: 0 auto;
+  padding-top: 233px;
+}
+
+.do-page>.section>.container>.contents-box>.app-renewal>.inner>.to-top-btn {
+  top: -100px;
+  height: 0px;
+  margin-bottom: 0px;
 }
