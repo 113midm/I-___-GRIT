@@ -86,6 +86,23 @@ function AmPage_init() {
   });
 };
 
+$(window).scroll(function () {
+  let scroll_top = $(this).scrollTop();
+  console.log(scroll_top);
+  if (scroll_top >= 3200) {
+    $(".do-page>.section>.container>.contents-box>.personal>.inner>.typography>p:not(.inter)").addClass("active");
+    $(".do-page>.section>.container>.contents-box>.personal>.inner>.typography>.inter").addClass("active");
+  }
+
+  
+});
+$(".do-page>.section>.container>.contents-box>.personal>.inner>.to-top-btn>.to-top").click(function () {
+  $("html, body").animate({
+      scrollTop: 0
+    },
+    500
+  );
+});
 AOS.init();
 MainPage_init();
 AmPage_init();
