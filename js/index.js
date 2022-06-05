@@ -166,7 +166,48 @@ $(".do-page>.section>.container>.menu-box>.inner>ul>.web").click(function () {
   }, 500);
 });
 
+$(".do-page>.section>.container>.menu-box>.inner>ul>.clone").click(function () {
 
+
+  $(this).siblings().removeClass("active");
+  $(this).addClass("active");
+  $(this).siblings().find(".active").removeClass("active");
+  $(this).find("li:first-child").addClass("active");
+
+  let $clone = $(".do-page>.section>.container>.contents-box>.clone-coding");
+  $clone.siblings().removeClass("active");
+  $clone.addClass("active");
+
+  let $cloneList = $(this).find('li');
+
+  let $first = $(".do-page>.section>.container>.menu-box>.inner>ul>.clone>ul>li:first-child");
+
+  //semoca에 active가 제거되지 않는다!!!!!
+  
+  // $cloneList.click(function () {
+
+  //   $first.removeClass("active");
+
+  //   $(this).siblings().removeClass("active");
+  //   $(this).addClass("active");
+  // });
+});
+
+$(".do-page>.section>.container>.menu-box>.inner>ul>.clone>ul>li").click(function () {
+
+  let $first = $(".do-page>.section>.container>.menu-box>.inner>ul>.clone>ul>li:first-child");
+  $first.removeClass("active");
+
+  $(this).siblings().removeClass("active");
+  $(this).addClass("active");
+});
+
+$(".do-page .clone-coding .portfolio").mouseenter(function () {
+  $(this).find('img').attr('src', 'image/do/clone-coding/do_clone_gidea-portfolio.svg');
+});
+$(".do-page .clone-coding .portfolio").mouseleave(function () {
+  $(this).find('img').attr('src', 'image/do/personal/do_personal-portfolio.svg');
+});
 
 
 AOS.init();
