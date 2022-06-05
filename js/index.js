@@ -101,7 +101,12 @@ $(window).scroll(function () {
   if (scroll_top >= 4220) {
     $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography>.typography-title").addClass("active");
   }
+
+  if (scroll_top >= 300) {
+    $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box").addClass("active");
+  }
 });
+
 $(".do-page>.section>.container>.contents-box>div>.inner>.to-top-btn>.to-top").click(function () {
   $("html, body").animate({
       scrollTop: 0
@@ -117,11 +122,11 @@ $(".do-page>.section>.container>.menu-box>.inner>ul>.personal").click(function (
   $(this).siblings().find(".active").removeClass("active");
   $(this).find("li").addClass("active");
 
-  $(window).scrollTop(0);
-
   let $personal = $(".do-page>.section>.container>.contents-box>.personal");
   $personal.siblings().removeClass("active");
   $personal.addClass("active");
+
+  $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").css("opacity", "0");
 });
 
 $(".do-page>.section>.container>.menu-box>.inner>ul>.app").click(function () {
@@ -130,8 +135,6 @@ $(".do-page>.section>.container>.menu-box>.inner>ul>.app").click(function () {
   $(this).addClass("active");
   $(this).siblings().find(".active").removeClass("active");
   $(this).find("li").addClass("active");
-
-  $(window).scrollTop(0);
 
   let $appRenewal = $(".do-page>.section>.container>.contents-box>.app-renewal");
   $appRenewal.siblings().removeClass("active");
@@ -142,6 +145,24 @@ $(".do-page>.section>.container>.menu-box>.inner>ul>.app").click(function () {
   }, 500);
   $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>div:last-child>img:last-child").animate({
     opacity: '1'
+  }, 500);
+
+  $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").css("opacity", "0");
+});
+
+$(".do-page>.section>.container>.menu-box>.inner>ul>.web").click(function () {
+
+  $(this).siblings().removeClass("active");
+  $(this).addClass("active");
+  $(this).siblings().find(".active").removeClass("active");
+  $(this).find("li").addClass("active");
+
+  let $webRenewal = $(".do-page>.section>.container>.contents-box>.web-renewal");
+  $webRenewal.siblings().removeClass("active");
+  $webRenewal.addClass("active");
+
+  $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").animate({
+    opacity: "1"
   }, 500);
 });
 

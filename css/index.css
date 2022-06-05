@@ -1338,7 +1338,8 @@ body {
   margin-left: 60px;
 }
 
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio {
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio{
   width: 180px;
   height: 40px;
   margin-left: auto;
@@ -1346,18 +1347,21 @@ body {
   cursor: pointer;
 }
 
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio>img {
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio>img,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio img {
   position: relative;
   z-index: 2;
   left: 0px;
   transition: left 0.5s ease;
 }
 
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>img {
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>img,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio:hover img {
   left: 10px;
 }
 
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio>span {
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio>span,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio span {
   background-color: var(--main-color-yellow);
   display: inline-block;
   width: 130px;
@@ -1367,7 +1371,8 @@ body {
   z-index: 1;
 }
 
-.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>span {
+.do-page>.section>.container>.contents-box>.personal>.inner>.epilogue>.portfolio:hover>span,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio:hover >span {
   animation: portfolioEf 0.5s ease forwards;
 }
 
@@ -1388,7 +1393,7 @@ body {
 .do-page>.section>.container>.contents-box>div>.inner>.to-top-btn {
   position: relative;
   height: 100px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .do-page>.section>.container>.contents-box>div>.inner>.to-top-btn>.to-top {
@@ -1645,6 +1650,346 @@ body {
 
 .do-page>.section>.container>.contents-box>.app-renewal>.inner>.to-top-btn {
   top: -100px;
-  height: 0px;
+  height: auto;
   margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner {
+  background: linear-gradient(178.9deg, #273F65 0%, #1A3C40 100.5%);
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro {
+  height: 830px;
+  background-image: url(../image/do/web-renewal/do_web-intro-bg.svg);
+  background-position: 0%;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child {
+  opacity: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview {
+  margin: 200px 0px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box {
+  margin: 0 auto;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner {
+  width: 900px;
+  height: 80px;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner {
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 80px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box::after,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner::before,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner::after,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner>.overview-title::before,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner>.overview-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box::after {
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  width: 1px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box.active::after {
+  transition-delay: 0.4s;
+  bottom: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner::before {
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  height: 1px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box.active>.box-inner::before {
+  transition-delay: 0.8s;
+  left: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner::after {
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box.active>.box-inner::after {
+  transition-delay: 1.2s;
+  top: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner>.overview-title {
+  width: 180px;
+  height: 41px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner>.overview-title::before {
+  top: 20px;
+  left: 180px;
+  width: 0px;
+  height: 1px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box.active>.box-inner>.overview-title::before {
+  transition-delay: 0s;
+  width: 360px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box>.box-inner>.overview-title::after {
+  top: 20px;
+  left: -360px;
+  width: 0px;
+  height: 1px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box.active>.box-inner>.overview-title::after {
+  transition-delay: 1.6s;
+  width: 360px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.goal {
+  position: relative;
+  height: 300px;
+  margin-bottom: 235px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.goal>.as-is {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.goal>.to-be {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.schedule {
+  height: 330px;
+  background-image: url(../image/do/web-renewal/do_web-schedule-bg.svg);
+  margin-bottom: 330px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.schedule>.schedule-text {
+  display: flex;
+  height: 100%;
+  width: 834px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-left: 107px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.schedule>.schedule-text>img,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>div>img,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail>div>img,
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>img{
+  display: block;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.concept>.concept-text {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.concept>.concept-bg {
+  position: relative;
+  z-index: 2;
+  top: -35px;
+  overflow: hidden;
+  margin-bottom: 290px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.grid-system {
+  height: 570px;
+  background-image: url(../image/do/web-renewal/do_web-grid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 350px;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.grid-system>.line-left {
+  width: 701px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  top: 520px;
+  left: 20px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.grid-system>.line-right {
+  width: 229px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  top: 520px;
+  right: 20px;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system {
+  height: 271px;
+  margin-bottom: 350px;
+  background-image: url(../image/do/web-renewal/do_web-color.svg);
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box {
+  position: absolute;
+  top: 31%;
+  left: 0%;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box>.main-color {
+  position: relative;
+  z-index: 2;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box>.circle {
+  width: 455px;
+  margin-left: 178px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box>.circle>div {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  border: 1px solid #002C6A;
+  position: relative;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box>.circle>.circle-black {
+  border: 1px solid #111;
+}
+
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.color-system>.circle-box>.circle>div>.inner {
+  width: 38px;
+  height: 72px;
+  background-color: #fff;
+  border-radius: 60px 0px 0px 60px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  transition: transform 3s;
+  transform-origin: 100% 50%;
+  animation: circle 1s linear infinite;
+}
+
+@keyframes circle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography {
+  height: 358px;
+  margin-bottom: 260px;
+  background-image: url(../image/do/web-renewal/do_web-typo-text.svg);
+  background-repeat: no-repeat;
+  background-position: 74px center;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>div{
+  display: flex;
+  align-items: center;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>.main-font {
+  padding-top: 83px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>.sub-font {
+  padding-top: 120px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>div>img:first-child{
+  margin-right: 33px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.typography>div>img:last-child {
+  margin-left: 13px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail {
+  height: 2815px;
+  background-image: url(../image/do/web-renewal/do_web-design.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail>.design-detail-title {
+  position: relative;
+  height: 66px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail>.design-detail-title>img:first-child {
+  position: absolute;
+  bottom: 14px;
+  right: 258px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail>.design-detail-title>img:last-child {
+  position: absolute;
+  top: 0;
+  right: 80px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.design-detail>.design-detail-text {
+  width: 238px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue {
+  margin-top: 200px;
+  padding-left: 93px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>img:first-child {
+  margin-bottom: 15px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio {
+  margin-top: 30px;
+}
+.do-page>.section>.container>.contents-box>.web-renewal>.inner>.epilogue>.portfolio span {
+  background: linear-gradient(90deg, rgba(248, 213, 84, 0.7) 0%, rgba(237, 106, 94, 0.7) 100%);
+}
+.do-page>.section>.container>.contents-box>.clone-coding>.inner {
+  background-color: var(--main-color-gray);
 }
