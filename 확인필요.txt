@@ -1,0 +1,14 @@
+<<am-page>>
+fullpage.js 오류!! >> html파일 마다 js파일 분리해서 해결
+
+
+
+<<do-page>>
+-personal 중간부터~clone coding까지 aos 안 먹힘(타이밍이 안 맞음, 훨씬 빠름)!!
+-personal 제외하고 aos 안 먹힘,,
+-clone-coding 메뉴 서울공예박물관 active 없애기!!
+
+
+<<will-page>>
+fullpage 세로 스크롤 / 가로 스크롤 고민 중
+가로스크롤, 한창 되다가 안됨! 페이지 로딩을 다시해야 동작됨
