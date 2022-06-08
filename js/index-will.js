@@ -1,23 +1,3 @@
-function WillPage_init() {
-  //가로 스크롤
-  willHzScroll();
-
-  //title 노란 배경 애니메이션 효과
-  let $page = $(".will-page>.section>.contents");
-  if ($page.attr('style','width: 7680px; height: 100vh; position: fixed; top: 100px; left: 0px;')) {
-    $(".will-page>.section>.contents>.section-1").addClass("active");
-  }
-  if ($page.attr('style','width: 7680px; height: 100vh; position: fixed; top: 100px; left: -1920px;')) {
-    $(".will-page>.section>.contents>.section-2").addClass("active");
-  }
-  if ($page.attr('style','width: 7680px; height: 100vh; position: fixed; top: 100px; left: -3840px;')) {
-    $(".will-page>.section>.contents>.section-3").addClass("active");
-  }
-  if ($page.attr('style','width: 7680px; height: 100vh; position: fixed; top: 100px; left: -5760px;')) {
-    $(".will-page>.section>.contents>.section-4").addClass("active");
-  }
-}
-
 function willHzScroll() {
   let d_width = 0; // 브라우저 가로
   let d_height = 0; // 문서 전체의 높이
@@ -94,4 +74,4 @@ function willHzScroll() {
 }
 
 AOS.init();
-WillPage_init();
+willHzScroll();

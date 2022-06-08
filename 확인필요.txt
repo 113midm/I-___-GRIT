@@ -1,14 +1,16 @@
-<<am-page>>
-fullpage.js 오류!! >> html파일 마다 js파일 분리해서 해결
+<<main-page>>
+***side menu에서 "do-page > app / web / clone" 클릭하면 해당 content가 나오게 하는 방법?!!
 
 
 
 <<do-page>>
--personal 중간부터~clone coding까지 aos 안 먹힘(타이밍이 안 맞음, 훨씬 빠름)!!
--personal 제외하고 aos 안 먹힘,,
--clone-coding 메뉴 서울공예박물관 active 없애기!!
+***personal 제외하고 aos 안 먹힘,, >> 스크롤 인식,,,
+***clone-coding 메뉴 '서울공예박물관' active 없애는 방법ㅠㅠ 
+  >> return false 쓰면 될 거 같은딩 >> a href="#" 이 안 먹힘
+
 
 
 <<will-page>>
-fullpage 세로 스크롤 / 가로 스크롤 고민 중
-가로스크롤, 한창 되다가 안됨! 페이지 로딩을 다시해야 동작됨
+-페이지 나타날 때마다 타이틀에 노란 배경 효과 주는 방법!!!
+  >> fullpage 슬라이드로 바꾸기!!
+  https://alvarotrigo.com/fullPage/extensions/scroll-horizontally.html#firstPage

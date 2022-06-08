@@ -99,6 +99,10 @@ input:focus {
   --text-color: #1B1C25;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -927,6 +931,7 @@ am page > section-4
   line-height: 30px;
   color: var(--main-color-gray);
   text-align: center;
+  cursor: default;
 }
 
 .am-page #fullpage>.section-4>div>.grit-sub>.logo-box>.text-box>div:not(.expansion) {
