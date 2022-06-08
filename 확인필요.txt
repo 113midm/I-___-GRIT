@@ -5,6 +5,22 @@
 
 <<do-page>>
 ***personal 제외하고 aos 안 먹힘,, >> 스크롤 인식,,,
+  >> display: none을 opacity: 0; visibility: hidden; 으로 대체
+  .do-page>.section>.container>.contents-box>div {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .do-page>.section>.container>.contents-box>div.active {
+    opacity: 1;
+    visibility: visible;
+    top: 0%;
+    left: 0%;
+  }
+  >> js에서 메인 메뉴 누를 때마다 해당 contents 각각 height 값을 다르게 주었다!
+  ***clone-coding 서브메뉴 클릭할 땐, 엉망이 된다,,,, 
+
 ***clone-coding 메뉴 '서울공예박물관' active 없애는 방법ㅠㅠ 
   >> return false 쓰면 될 거 같은딩 >> a href="#" 이 안 먹힘
 
@@ -14,3 +30,5 @@
 -페이지 나타날 때마다 타이틀에 노란 배경 효과 주는 방법!!!
   >> fullpage 슬라이드로 바꾸기!!
   https://alvarotrigo.com/fullPage/extensions/scroll-horizontally.html#firstPage
+  >> scrollHorizontally: true 사용하려면 확장 구매 필요
+  >> swiper-slide로 대체!! (해결)

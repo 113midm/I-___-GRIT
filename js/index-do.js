@@ -15,6 +15,8 @@ function personalPage_init() {
     let $personal = $(".do-page>.section>.container>.contents-box>.personal");
     $personal.siblings().removeClass("active");
     $personal.addClass("active");
+
+    $(".do-page>.section").css("height", "1070vh");
   });
 
   $(window).scroll(function () {
@@ -43,6 +45,8 @@ function appPage_init() {
     let $appRenewal = $(".do-page>.section>.container>.contents-box>.app-renewal");
     $appRenewal.siblings().removeClass("active");
     $appRenewal.addClass("active");
+
+    $(".do-page>.section").css("height", "1461.3vh");
 
     //app contents 나올 때마다 'on/' 효과
     $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>.on>span").animate({
@@ -83,6 +87,8 @@ function webPage_init() {
     $webRenewal.siblings().removeClass("active");
     $webRenewal.addClass("active");
 
+    $(".do-page>.section").css("height", "945vh");
+
     //web contents 나올 때마다 로고 색 변하는 효과
     $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").animate({
       opacity: "1"
@@ -121,6 +127,8 @@ function clonePage_init() {
     let $clone = $(".do-page>.section>.container>.contents-box>.clone-coding");
     $clone.siblings().removeClass("active");
     $clone.addClass("active");
+
+    $(".do-page>.section").css("height", "790vh");
 
     //clone-portfolio 보러가기 버튼에 마우스 올리면 이미지 변화
     $(".do-page .clone-coding .portfolio").mouseenter(function () {
