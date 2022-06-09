@@ -21,7 +21,7 @@ function personalPage_init() {
 
   $(window).scroll(function () {
     let scroll_top = $(this).scrollTop();
-    // console.log(scroll_top);
+    console.log(scroll_top);
 
     //personal-typography 타이핑 효과
     if (scroll_top >= 3200) {
@@ -105,53 +105,48 @@ function webPage_init() {
 }
 
 function clonePage_init() {
-  //메인 메뉴 clone 눌렀을 때, 해당 contents 나오기
+  //메인 메뉴 clone(li) 눌렀을 때
   $(".do-page>.section>.container>.menu-box>.inner>ul>.clone").click(function () {
 
-    //메인 메뉴 active
+    //다른 메인 메뉴들과 그 서브 메뉴들 active 제거
     $(this).siblings().removeClass("active");
-    $(this).addClass("active");
-    //다른 메인 메뉴들 자손들 active 제거
     $(this).siblings().find(".active").removeClass("active");
-    //첫 번째 서브 메뉴(서울공예박물관)에 active 추가
-    $(this).find("li:first-child").addClass("active");
 
-    //서브 메뉴들 active
-    let $cloneList = $(this).find('li');
-    $cloneList.click(function () {
-      $(this).siblings().removeClass("active");
-      $(this).addClass("active");
-    });
-
-    //clone contents에 active 추가
-    let $clone = $(".do-page>.section>.container>.contents-box>.clone-coding");
+    let $clone = $(".do-page > .section > .container > .contents-box > .clone-coding");
+    //다른 contents 제거
     $clone.siblings().removeClass("active");
+    //clone contents 나오기
     $clone.addClass("active");
 
+    //clone contents에 맞게 높이 변경
     $(".do-page>.section").css("height", "790vh");
-
-    //clone-portfolio 보러가기 버튼에 마우스 올리면 이미지 변화
-    $(".do-page .clone-coding .portfolio").mouseenter(function () {
-      $(this).find('img').attr('src', 'image/do/clone-coding/do_clone_gidea-portfolio.svg');
-    });
-    $(".do-page .clone-coding .portfolio").mouseleave(function () {
-      $(this).find('img').attr('src', 'image/do/personal/do_personal-portfolio.svg');
-    });
   });
 
-  $(window).scroll(function () {
-    let scroll_top = $(this).scrollTop();
-    if (scroll_top >= 1600) {
-      $("#tenxten>.tenxten-header>.skew-box").addClass("active");
-    }
+  //메인 메뉴 clone(li) > a 눌렀을 때
+  $(".do-page>.section>.container>.menu-box>.inner>ul>.clone > a").click(function () {
+    //a의 부모, li에 active 추가
+    $(this).parents(".clone").addClass("active");
+    //a의 형제 ul의 자손들 중 첫째(semoca)에 active 추가
+    $(this).siblings("ul").find(".active").removeClass("active");
+    $(this).siblings("ul").find("> li:first-child").addClass("active");
+  });
 
-    if (scroll_top >= 3700) {
-      $("#gidea>.gidea-header>.skew-box").addClass("active");
-    }
+  //메인 메뉴 clone(li) > ul > 서브 메뉴(li) 눌렀을 때
+  $(".do-page>.section>.container>.menu-box>.inner>ul>.clone>ul>li").click(function () {
+    //클릭한 서브 메뉴 형제들의 active 제거
+    $(this).siblings(".active").removeClass("active");
+    //클릭한 서브 메뉴에 active 추가
+    $(this).addClass("active");
+    //클릭한 서브 메뉴의 부모, li에 active 추가
+    $(this).parents(".clone").addClass("active");
+  });
 
-    if (scroll_top >= 5400) {
-      $("#wavve>.wavve-header>.skew-box").addClass("active");
-    }
+  //clone-portfolio 보러가기 버튼에 마우스 올리면 이미지 변화
+  $(".do-page .clone-coding .portfolio").mouseenter(function () {
+    $(this).find('img').attr('src', 'image/do/clone-coding/do_clone_gidea-portfolio.svg');
+  });
+  $(".do-page .clone-coding .portfolio").mouseleave(function () {
+    $(this).find('img').attr('src', 'image/do/personal/do_personal-portfolio.svg');
   });
 }
 
