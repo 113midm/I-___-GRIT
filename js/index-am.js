@@ -1,3 +1,9 @@
+$(window).ready(function () {
+  setTimeout(function () {
+    $("#am-loading").fadeOut();
+  }, 2100);
+});
+
 function AmPage_init() {
 
   //fullpage

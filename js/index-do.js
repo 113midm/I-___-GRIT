@@ -1,3 +1,13 @@
+$(window).ready(function () {
+  setTimeout(function () {
+    $("#do-loading").fadeOut();
+    $("html, body").css({
+      'overflow-y': 'auto',
+      'overflow-x': 'hidden'
+    });
+  }, 2100);
+});
+
 //새로고침 했을 때 페이지 맨 위로 올라가기
 history.scrollRestoration = "manual"
 
