@@ -1,7 +1,7 @@
 <<전체>>
-***1200px까지 영역 망가지는 거 수정하기
-  -do-page만 확인하면 됨
+-1200px까지 영역 망가지는 거 수정하기
 -로딩 페이지 만들어보기
+-main, am-page에 배경 아이템(산호초)를 넣을까 말까,,,, (gif 만들려면 포토샵 깔아야됨!)
 
 
 
@@ -17,8 +17,6 @@
 
 <<am-page>>
 -전체적으로 내용 한번씩 읽어보고 수정
-
-*section-5 배경으로 산호초.gif 만들어서 넣기 (포토샵 깔아야됨,,)
 
 
 
@@ -38,17 +36,18 @@
     left: 0%;
   }
   >> js에서 메인 메뉴 누를 때마다 해당 contents 각각 height 값을 다르게 주었다!
-***clone-coding 서브메뉴 클릭할 땐, 엉망이 된다,,,, 
+-clone-coding 서브메뉴 클릭할 땐, 엉망이 된다,,,, 
   >> clone에 aos 효과 제거, 보기에 더 깔끔하다.
+  >> aos 효과 모두 제거하고 block 속성 이용
 
 -clone-coding 메뉴 '서울공예박물관' active 없애는 방법ㅠㅠ 
   >> return false 쓰면 될 거 같은딩 >> a href="#" 이 안 먹힘 >> 해결
   >> li로는 메인 메뉴, 콘텐츠 active 조절하고
       a로 서브 메뉴 active 조절, .parent() 사용!
 
-*프로세스 페이지 내용 세부 수정
+-프로세스 페이지 내용 세부 수정
 
-*clone, codepen 말고 git에 등록하기
+-속성 변경: menu-box를 fixed하고 contents-box는 flex-end로 끝에 고정. 미디어 쿼리로 menu-box 크기 조절
 
 
 

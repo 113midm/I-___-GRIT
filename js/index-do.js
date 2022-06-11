@@ -25,8 +25,6 @@ function personalPage_init() {
     let $personal = $(".do-page>.section>.container>.contents-box>.personal");
     $personal.siblings().removeClass("active");
     $personal.addClass("active");
-
-    $(".do-page>.section").css("height", "1070vh");
   });
 
   $(window).scroll(function () {
@@ -56,8 +54,6 @@ function appPage_init() {
     $appRenewal.siblings().removeClass("active");
     $appRenewal.addClass("active");
 
-    $(".do-page>.section").css("height", "1461.3vh");
-
     //app contents 나올 때마다 'on/' 효과
     $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.intro>.title>.on>span").animate({
       left: "42px"
@@ -66,19 +62,6 @@ function appPage_init() {
       opacity: '1'
     }, 500);
     $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").css("opacity", "0");
-  });
-
-  $(window).scroll(function () {
-    let scroll_top = $(this).scrollTop();
-    //app-logo 배경 펼쳐지는 효과
-    if (scroll_top >= 3100) {
-      $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.logo-system>.logo-system-bg>img").addClass("active");
-    }
-
-    //app-typography 타이핑 효과
-    if (scroll_top >= 4220) {
-      $(".do-page>.section>.container>.contents-box>.app-renewal>.inner>.typography>.typography-title").addClass("active");
-    }
   });
 }
 
@@ -97,20 +80,10 @@ function webPage_init() {
     $webRenewal.siblings().removeClass("active");
     $webRenewal.addClass("active");
 
-    $(".do-page>.section").css("height", "945vh");
-
     //web contents 나올 때마다 로고 색 변하는 효과
     $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.intro>.intro-title>svg:last-child").animate({
       opacity: "1"
-    }, 500);
-  });
-
-  $(window).scroll(function () {
-    let scroll_top = $(this).scrollTop();
-    //web-overview 박스 테두리 그리는 효과
-    if (scroll_top >= 300) {
-      $(".do-page>.section>.container>.contents-box>.web-renewal>.inner>.overview>.box").addClass("active");
-    }
+    }, 1000);
   });
 }
 
@@ -127,9 +100,6 @@ function clonePage_init() {
     $clone.siblings().removeClass("active");
     //clone contents 나오기
     $clone.addClass("active");
-
-    //clone contents에 맞게 높이 변경
-    $(".do-page>.section").css("height", "790vh");
   });
 
   //메인 메뉴 clone(li) > a 눌렀을 때
