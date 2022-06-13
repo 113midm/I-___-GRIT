@@ -446,7 +446,7 @@ home-page > section > center
 
 .main-page>.section>.center .middle-txt[data-index="2"]>.typing-animation-3 {
   opacity: 1;
-  width: 4ch;
+  width: 4.5ch;
   animation: typinganimation 0.5s steps(4);
 }
 
